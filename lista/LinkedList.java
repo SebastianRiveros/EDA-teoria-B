@@ -1,7 +1,7 @@
 public class LinkedList<T> {
     private Node<T> head;
     private int size;
-
+//dfsd
     public LinkedList(){
         this.head = null;
         this.size = 0;
