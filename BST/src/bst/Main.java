@@ -11,6 +11,7 @@ public class Main {
         tree.insert(4);
         tree.insert(7);
         tree.insert(9);
+        tree.insert(10);
         
         // Mostrar el árbol
         System.out.println("Árbol después de insertar elementos:");
@@ -23,8 +24,6 @@ public class Main {
         // Eliminar elementos del árbol
         tree.remove(3);
         tree.remove(7);
-        // Intentar eliminar un elemento que no existe
-        tree.remove(10);
         
         // Mostrar el árbol después de eliminar elementos
         System.out.println("Árbol después de eliminar elementos:");

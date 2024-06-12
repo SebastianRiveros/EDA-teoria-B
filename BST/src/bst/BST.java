@@ -107,4 +107,8 @@ public class BST <E extends Comparable<E>> {
             show(node.getLeft(), level + 1);
         }
     }
+
+    public boolean isEmpty(){
+        return root == null;
+    }
 }
