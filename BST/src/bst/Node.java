@@ -1,16 +1,17 @@
+package bst;
 public class Node<T> {
     private T data;
     private Node<T> left;
     private Node<T> right;
 
-    public Node(E data, Node<E> left, Node<E> right){
+    public Node(T data, Node<T> left, Node<T> right){
         this.data = data;
         this.left = left;
         this.right = right;
     }
 
     public Node(T data){
-        super(data,null,null);
+        this(data,null,null);
     }
 
     public T getData(){
@@ -26,7 +27,7 @@ public class Node<T> {
         this.left = left;   
     }
     public Node<T> getRight(){
-        return this.rigth;
+        return this.right;
     }
     public void setRight(Node<T> right){
         this.right = right;   

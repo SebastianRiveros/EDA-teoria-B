@@ -1,3 +1,5 @@
+package bst;
+import exceptions.*;
 public class BST <E extends Comparable<E>> {
     // Atributos
     private Node<E> root;
@@ -18,7 +20,7 @@ public class BST <E extends Comparable<E>> {
         if(comparison < 0) 
             node.setLeft(insert(node.getLeft(), x));
         else if(comparison > 0) 
-            node.setRigth(insert(node.getRight(), x));
+            node.setRight(insert(node.getRight(), x));
         else 
             throw new ItemDuplicated("El elemento "+ x +" ya existe");
         return node;
@@ -34,7 +36,7 @@ public class BST <E extends Comparable<E>> {
         int comparison = x.compareTo(node.getData());
         if(comparison < 0)
             return search(node.getLeft(), x);
-        else if(comparicion > 0)
+        else if(comparison > 0)
             return search(node.getRight(), x);
         else
             return node;
@@ -71,7 +73,7 @@ public class BST <E extends Comparable<E>> {
         return minSearch(node.getLeft());
     }
 
-    public E minRemove(){
+    public void minRemove(){
         this.root = minRemove(root);
     }
     private Node<E> minRemove(Node<E> node){
