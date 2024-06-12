@@ -24,5 +24,21 @@ public class BST <E extends Comparable<E>> {
         return node;
     }
 
+    public E search(E x) throws ItemNotFound {
+        Node<E> wanted = search(head, x);
+        return wanted.getData();
+    }
+    private Node<E> search(Node<E> node, E x) throws ItemNotFound {
+        if(node == null)
+            throw new ItemNotFound("El elemento "+ x +" no existe");
+        int comparison = x.compareTo(node.getData());
+        if(comparison < 0)
+            return search(node.getLeft(), x);
+        else if(comparicion > 0)
+            return search(node.getRight(), x);
+        else
+            return node;
+    }
+
     
 }
